@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "echobrief"
+version = "0.1.0"
+description = ""
+authors = ["jggomez <juan.gomez01@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+google-genai = "^1.2.0"
+gradio = "^5.16.2"
+soundfile = "^0.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
