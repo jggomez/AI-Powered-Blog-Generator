@@ -1,9 +1,9 @@
 from dotenv import load_dotenv
-load_dotenv()
 from get_content_agent import get_content_agent, get_content
 from autogen import ConversableAgent, register_function
 import os
-from summarization_agent import summarization_agent
+
+load_dotenv()
 
 
 llm_config = {
@@ -29,24 +29,3 @@ register_function(
     executor=expert_content_agent,
     description="Primary task is to receive a topic from the user and provide accurate, concise, and comprehensive information about it.",
 )
-
-results = expert_content_agent.initiate_chats(
-    [
-        {
-            "recipient": get_content_agent,
-            "message": "Let's get reliable information for a blog about the Axolotl animal",
-            "max_turns": 2,
-            "summary_method": "last_msg",
-        },
-        {
-            "recipient": summarization_agent,
-            "message": "Create a summary",
-            "max_turns": 1,
-            "summary_method": "last_msg",
-        },
-    ]
-)
-
-print(results)
-print(results[0].summary)
-print(results[1].summary)

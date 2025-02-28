@@ -12,6 +12,8 @@ gradio = "^5.16.2"
 soundfile = "^0.13.1"
 ag2 = {extras = ["gemini", "openai"], version = "^0.7.6"}
 python-dotenv = "^1.0.1"
+tweepy = "^4.15.0"
+pydantic = "^2.10.6"
 
 
 [build-system]
