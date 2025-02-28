@@ -3,9 +3,10 @@ import gradio as gr
 from google import genai
 import soundfile as sf
 import io
+import os
 
 
-client = genai.Client(api_key="AIzaSyAK__PhUk2GU6rdjI868aKRuYW5QTvZ5XI")
+client = genai.Client(api_key=os.environ["GOOGLE_GENAI_API_KEY"])
 
 ui_blocks = gr.Blocks()
 
