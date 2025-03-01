@@ -1,8 +1,12 @@
-from dotenv import load_dotenv
-from get_content_agent import get_content_agent, get_content
-from create_images_agent import create_image_agent, create_image
-from autogen import ConversableAgent, register_function
 import os
+
+from autogen import ConversableAgent
+from autogen import register_function
+from create_images_agent import create_image
+from create_images_agent import create_image_agent
+from dotenv import load_dotenv
+from get_content_agent import get_content
+from get_content_agent import get_content_agent
 
 load_dotenv()
 
@@ -10,7 +14,7 @@ load_dotenv()
 llm_config = {
     "model": "gemini-2.0-flash",
     "api_type": "google",
-    "api_key": os.environ["GOOGLE_GENAI_API_KEY"]
+    "api_key": os.environ["GOOGLE_GENAI_API_KEY"],
 }
 
 expert_content_message = """

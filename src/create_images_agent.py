@@ -1,10 +1,11 @@
 import os
+
 from autogen import ConversableAgent
+from dotenv import load_dotenv
 from google import genai
 from google.genai import types
-from dotenv import load_dotenv
-from pydantic import BaseModel
 from google.genai.types import GenerateContentConfig
+from pydantic import BaseModel
 
 
 load_dotenv()
@@ -35,7 +36,7 @@ def create_prompt_image(text: str) -> ImagePrompt:
         config=GenerateContentConfig(
             response_mime_type="application/json",
             response_schema=ImagePrompt,
-        )
+        ),
     )
     return response_model.parsed
 
@@ -49,10 +50,10 @@ def create_image_google(text: str) -> str:
         prompt=prompt.prompt,
         config=types.GenerateImagesConfig(
             number_of_images=1,
-        )
+        ),
     )
     if len(response_model.generated_images) > 0:
-        with open(url_image, 'wb') as f:
+        with open(url_image, "wb") as f:
             f.write(response_model.generated_images[0].image.image_bytes)
     return url_image
 

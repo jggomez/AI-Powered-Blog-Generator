@@ -36,7 +36,7 @@ This repository contains an application that utilizes AI agents to automatically
 
 ## Requirements
 
-* Python 3.6 or higher
+* Python 3.10 or higher
 * Access to the Gemini 2.0 APIs
 * Basic knowledge of AI Agent frameworks.
 
@@ -72,4 +72,22 @@ Contributions are welcome! If you find bugs or have suggestions for improving th
 This project is licensed under the [Indicate license] license.
 ```
 
-Espero que esto ayude.
+Made with ❤ by  [jggomez](https://devhack.co).
+Made with ❤ by  [haruiz](https://github.com/haruiz).
+
+[![Twitter Badge](https://img.shields.io/badge/-@jggomezt-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/jggomezt)](https://twitter.com/jggomezt)
+[![Linkedin Badge](https://img.shields.io/badge/-jggomezt-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jggomezt/)](https://www.linkedin.com/in/jggomezt/)
+[![Medium Badge](https://img.shields.io/badge/-@jggomezt-03a57a?style=flat-square&labelColor=000000&logo=Medium&link=https://medium.com/@jggomezt)](https://medium.com/@jggomezt)
+
+## License
+
+    Copyright 2025 Juan Guillermo Gómez and Henry Ruiz
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS

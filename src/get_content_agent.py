@@ -1,10 +1,13 @@
 import os
+
 import tweepy
 from autogen import ConversableAgent
-from google import genai
-from google.genai.types import Tool, GenerateContentConfig, GoogleSearch
-from pydantic import BaseModel
 from dotenv import load_dotenv
+from google import genai
+from google.genai.types import GenerateContentConfig
+from google.genai.types import GoogleSearch
+from google.genai.types import Tool
+from pydantic import BaseModel
 
 load_dotenv()
 
@@ -35,7 +38,7 @@ def detect_entities(question: str) -> Entities:
         config=GenerateContentConfig(
             response_mime_type="application/json",
             response_schema=Entities,
-        )
+        ),
     )
     return response_model.parsed
 
@@ -53,7 +56,7 @@ def get_content_grounding(question: str) -> str:
         contents=question,
         config=GenerateContentConfig(
             tools=[Tool(google_search=GoogleSearch())],
-        )
+        ),
     )
     return response_model.text
 
@@ -70,7 +73,7 @@ def get_content(question: str) -> str:
 
 
 get_content_agent_system_message = """
-You are an information retrieval agent. 
+You are an information retrieval agent.
 Your primary task is to receive a topic from the user and provide accurate and comprehensive information about it.
 """
 
