@@ -34,6 +34,13 @@ This repository contains an application that utilizes AI agents to automatically
 * Gemini 2.0
 * Gradio
 
+## Screenshots
+
+![Screenshot 2025-02-28 at 8 47 25 p m](https://github.com/user-attachments/assets/68089305-42b9-4622-892c-6840cec2329a)
+
+![Screenshot 2025-02-28 at 8 47 34 p m](https://github.com/user-attachments/assets/6d3f3f8d-9a42-4177-9958-ab0ed585e385)
+
+
 ## Requirements
 
 * Python 3.10 or higher
