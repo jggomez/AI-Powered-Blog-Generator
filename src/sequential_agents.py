@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 from get_content_agent import get_content_agent, get_content
+from create_images_agent import create_image_agent, create_image
 from autogen import ConversableAgent, register_function
 import os
 
@@ -28,4 +29,11 @@ register_function(
     caller=get_content_agent,
     executor=expert_content_agent,
     description="Primary task is to receive a topic from the user and provide accurate, concise, and comprehensive information about it.",
+)
+
+register_function(
+    create_image,
+    caller=create_image_agent,
+    executor=expert_content_agent,
+    description="Primary task is to receive a blog text and create image based on it.",
 )

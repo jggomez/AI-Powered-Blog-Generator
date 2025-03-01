@@ -47,7 +47,7 @@ def get_tweets(topic: str) -> list[str]:
 
 
 def get_content_grounding(question: str) -> str:
-    question = question + ". Please get text, key_words, links and images links."
+    question = question + ". Please get text, key_words and links"
     response_model = client.models.generate_content(
         model=MODEL_GEMINI,
         contents=question,
@@ -78,9 +78,4 @@ get_content_agent = ConversableAgent(
     name="get_content_agent",
     llm_config=llm_config,
     system_message=get_content_agent_system_message,
-)
-
-executor_agent = ConversableAgent(
-    name="executor_agent",
-    human_input_mode="NEVER",
 )

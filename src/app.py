@@ -8,6 +8,7 @@ from sequential_agents import expert_content_agent
 from dotenv import load_dotenv
 from blogging_agent import blogging_agent
 from get_content_agent import get_content_agent
+from create_images_agent import create_image_agent
 import json
 
 
@@ -61,12 +62,19 @@ def orchestration(audio, text):
                 "max_turns": 1,
                 "summary_method": "last_msg",
             },
+            {
+                "recipient": create_image_agent,
+                "message": "Create an image",
+                "max_turns": 2,
+                "summary_method": "last_msg",
+            },
         ]
     )
+    print(results[1].summary)
+    print(results[2].summary)
     result = results[1].summary
-    print(result)
     lesson_plan_json = json.loads(result)
-    return lesson_plan_json["title"], lesson_plan_json["text"], lesson_plan_json["links"]
+    return lesson_plan_json["title"], lesson_plan_json["text"], lesson_plan_json["links"], gr.Image("images/image_blog.png")
 
 
 input_audio = gr.Audio(
@@ -85,7 +93,8 @@ get_prompt_ui_block = gr.Interface(
             gr.Textbox(label="Ask me", value="Search about the Mexican animal axolotl")],
     outputs=[gr.Textbox(label="Title"),
              gr.Textbox(label="Text"),
-             gr.Textbox(label="Links"),],
+             gr.Textbox(label="Links"),
+             gr.Image()],
     allow_flagging="never")
 
 with ui_blocks:

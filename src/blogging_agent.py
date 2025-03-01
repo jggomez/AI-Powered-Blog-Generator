@@ -10,7 +10,6 @@ class BlogArticle(BaseModel):
     title: str
     text: str
     links: list[str]
-    images: list[str]
 
 
 llm_config = {
@@ -41,7 +40,6 @@ Create:
 - title
 - long text
 - links
-- images
 """
 
 blogging_agent = ConversableAgent(
