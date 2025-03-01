@@ -74,10 +74,6 @@ This repository contains an application that utilizes AI agents to automatically
 
 Contributions are welcome! If you find bugs or have suggestions for improving the application, please open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [Indicate license] license.
-```
 
 Made with ❤ by  [jggomez](https://devhack.co).
 Made with ❤ by  [haruiz](https://github.com/haruiz).
